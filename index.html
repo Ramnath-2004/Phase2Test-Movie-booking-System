@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MoviseWorld</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* General Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        /* Custom Styles for cta-btn-secondary */
+        .cta-btn-secondary {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            /* Gradient from purple to blue */
+            color: white;
+            /* White text */
+            border: 2px solid transparent;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow */
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hover Effect */
+        .cta-btn-secondary:hover {
+            background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+            /* Inverse gradient on hover */
+            color: white;
+            /* White text remains */
+            border: 2px solid #2575fc;
+            /* Blue border */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+            /* Enhanced shadow on hover */
+            transform: translateY(-4px);
+            /* Slight lift effect */
+        }
+
+        /* Active/Focus Effect */
+        .cta-btn-secondary:active,
+        .cta-btn-secondary:focus {
+            outline: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            /* Slightly smaller shadow when active */
+        }
+
+        /* Large Button Size */
+        .btn-lg {
+            padding: 20px 50px;
+            /* Larger padding for bigger buttons */
+            font-size: 20px;
+            /* Larger font size for visibility */
+        }
+
+        /* Spacing Between Buttons */
+        a+a {
+            margin-left: 20px;
+        }
+
+        /* Small Screen Adjustments */
+        @media (max-width: 768px) {
+            .btn-lg {
+                padding: 16px 30px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MoviesWorld</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies.html">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutus">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Signup</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to MoviesWorld</h1>
+            <p>Your gateway to the best movies, all in one place. Join us and experience the magic of cinema!</p>
+            <h2 class="mb-4">Ready to Experience Movies Like Never Before?</h2>
+            <p class="lead">Join MovieWorld now and start booking your favorite movies today.</p>
+            <a href="register.html" class="btn cta-btn-secondary btn-lg">Join Now</a>
+            <a href="#contact" class="btn cta-btn-secondary btn-lg">Contact Us</a>
+
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose MovieWorld?</h2>
+            <div class="row">
+                <!-- Feature 1 -->
+                <div class="col-12 col-md-4 feature-item mb-4">
+                    <i class="bi bi-film"></i>
+                    <h4>Extensive Movie Library</h4>
+                    <p>Browse through a wide range of movies from all genres. Find your next favorite film.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="col-12 col-md-4 feature-item mb-4">
+                    <i class="bi bi-calendar-check"></i>
+                    <h4>Easy Booking</h4>
+                    <p>Book tickets for your favorite movies at any time. Choose the perfect time and theater.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="col-12 col-md-4 feature-item mb-4">
+                    <i class="bi bi-credit-card"></i>
+                    <h4>Secure Payments</h4>
+                    <p>Pay securely for your movie tickets with our trusted payment gateways.</p>
+                </div>
+            </div>
+
+            <!-- New Features Added -->
+            <div class="row mt-5">
+                <!-- Feature 4 -->
+                <div class="col-12 col-md-4 feature-item mb-4">
+                    <i class="bi bi-person-plus"></i>
+                    <h4>Multiple User Profiles</h4>
+                    <p>Create personalized profiles for multiple users, making it easy for everyone in the family to
+                        have their own recommendations and movie history.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="col-12 col-md-4 feature-item mb-4">
+                    <i class="bi bi-brightness-high"></i>
+                    <h4>High-Quality Streaming</h4>
+                    <p>Enjoy your movies in stunning HD quality with buffer-free streaming for an exceptional viewing
+                        experience.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="col-12 col-md-4 feature-item mb-4">
+                    <i class="bi bi-star"></i>
+                    <h4>Movie Recommendations</h4>
+                    <p>Get personalized movie suggestions based on your viewing history, ensuring you never run out of
+                        options.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="aboutus" class="about-us-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="text-center mb-4">About MoviesWorld</h2>
+                    <p class="lead text-center">
+                        Welcome to **MoviesWorld**, your go-to destination for booking movie tickets easily and quickly.
+                        Our platform offers an extensive library of the latest and greatest movies, from action-packed
+                        blockbusters to heartwarming dramas.
+                    </p>
+                    <p class="text-center">
+                        Our mission is to provide users with an intuitive and seamless experience for browsing movies,
+                        booking tickets, and staying updated with upcoming releases. Whether you're a casual moviegoer
+                        or a dedicated film enthusiast, MovieWorld is here to make your movie experience better.
+                    </p>
+                    <p class="text-center">
+                        With **MoviesWorld**, you can browse movies, check showtimes, select the best seats, and book
+                        your tickets in a few simple steps. Enjoy movies the way they were meant to be enjoyed—on your
+                        schedule, with the best seats in the house.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGRunis2IHDJOJF_ip3YyMCT6OceXYmKcw8g&s"
+                        alt="MovieWorld" class="img-fluid rounded-circle mx-auto d-block" width="250">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Us Section -->
+    <section class="contact-us-section py-5" id="contact">
+        <div class="container d-flex align-items-center justify-content-center min-vh-100">
+            <div class="row w-100">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h2 class="text-center mb-4">Contact Us</h2>
+                    <h4>Get in Touch</h4>
+                    <p>If you have any questions or want to get in touch with us, feel free to use the contact form
+                        below or email us directly.</p>
+                </div>
+                <div class="col-md-6">
+                    <!-- Contact Form -->
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                        <div id="formContainer">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </div>
+                        <div id="successMessage" class="text-center" style="display:none;">
+                            <h4>Message Sent Successfully!</h4>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section Styling -->
+    <style>
+        /* Contact Us Section Styling */
+        .contact-us-section {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-us-section h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .contact-us-section h4 {
+            color: #333;
+        }
+
+        .contact-us-section p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-us-section .form-label {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .contact-us-section .form-control {
+            font-size: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-us-section .btn-primary {
+            background-color: #ff5e5b;
+            border: none;
+            font-size: 1.1rem;
+        }
+
+        .contact-us-section .btn-primary:hover {
+            background-color: #e24e47;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-us-section h2 {
+                font-size: 2rem;
+            }
+
+            .contact-us-section .form-control {
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 MoviesWorld. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();  // Prevent the default form submission
+
+            // Hide the form and show success message
+            document.getElementById("formContainer").style.display = "none";
+            document.getElementById("successMessage").style.display = "block";
+
+            // Hide the success message after 3 seconds
+            setTimeout(function () {
+                document.getElementById("successMessage").style.display = "none";
+                // Optionally, you can show the form again if needed
+                document.getElementById("formContainer").style.display = "block";
+            }, 3000);  // 3000 milliseconds = 3 seconds
+        }
+
+    </script>
+    <!-- Bootstrap JS (including Popper.js) for collapse feature -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

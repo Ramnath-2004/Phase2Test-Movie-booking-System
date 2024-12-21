@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket - MovieWorld</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .ticket-booking-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .ticket-booking-form h2 {
+            font-size: 1.75rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .btn-book-now {
+            background-color: #ff5e5b;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .btn-book-now:hover {
+            background-color: #ff3f3b;
+        }
+
+        .movie-image {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .movie-title {
+            font-size: 2rem;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MoviesWorld</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies.html">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Signup</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Booking Form -->
+    <div class="container py-5">
+        <div class="ticket-booking-form">
+            <h2 class="text-center">Book Your Movie Ticket</h2>
+
+            <!-- Movie Image -->
+            <div class="movie-image">
+                <img id="movieImage" src="" alt="Movie Poster" class="img-fluid">
+            </div>
+
+            <form id="bookingForm">
+                <div class="mb-3">
+                    <label for="movieTitle" class="form-label">Movie Title</label>
+                    <input type="text" class="form-control" id="movieTitle" name="movieTitle" disabled>
+                </div>
+
+                <div class="mb-3">
+                    <label for="theater" class="form-label">Theater</label>
+                    <select class="form-select" id="theater" name="theater" required>
+                        <option value="IMAX">IMAX</option>
+                        <option value="Standard">Standard</option>
+                        <option value="VIP">VIP</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="tickets" class="form-label">Number of Tickets</label>
+                    <input type="number" class="form-control" id="tickets" name="tickets" min="1" max="10" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="showTime" class="form-label">Show Time</label>
+                    <select class="form-select" id="showTime" name="showTime" required>
+                        <option value="12:00 PM">12:00 PM</option>
+                        <option value="03:00 PM">03:00 PM</option>
+                        <option value="06:00 PM">06:00 PM</option>
+                        <option value="09:00 PM">09:00 PM</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Contact Number</label>
+                    <input type="text" class="form-control" id="contact" name="contact" required>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-book-now">Confirm Booking</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="alert alert-success mt-4" style="display:none;">
+            Your movie ticket has been booked successfully!
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 MoviesWorld. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // Function to get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        const movieTitle = getQueryParam('movieTitle');
+        const movieImage = getQueryParam('movieImage');
+        document.getElementById('movieTitle').value = movieTitle;
+        document.getElementById('movieImage').src = '/assets/images/' + movieImage;
+
+        // Form submission logic
+        document.getElementById('bookingForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Hide success message after 3 seconds
+            setTimeout(function () {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 3000);
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

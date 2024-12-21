@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies | MoviesWorld</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .movie-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+
+    .movie-card img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .movie-card-body {
+      padding: 20px;
+    }
+
+    .movie-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .movie-description {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .btn-book {
+      background-color: #ff5e5b;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .btn-book:hover {
+      background-color: #ff3f3b;
+    }
+
+    /* Ensure the images fill the container properly */
+    .img-container {
+      width: 100%;
+      height: 200px;
+      /* Set a fixed height for the card image */
+      overflow: hidden;
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Ensures the image fills the container without distortion */
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">MoviesWorld</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="movies.html">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Signup</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Movies Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Now Showing</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="img-container">
+            <img src="/assets/images/ffa.jpeg" class="card-img-top img-fluid" alt="Five Feet Apart">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Five Feet Apart</h5>
+            <a href="book-ticket.html?movieTitle=Five%20Feet%20Apart&movieImage=ffa.jpeg" class="btn btn-primary">Book
+              Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="img-container">
+            <img src="/assets/images/interstellar.jpeg" class="card-img-top img-fluid" alt="Interstellar">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Interstellar</h5>
+            <a href="book-ticket.html?movieTitle=Interstellar&movieImage=interstellar.jpeg" class="btn btn-primary">Book
+              Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="img-container">
+            <img src="/assets/images/amaran.jpeg" class="card-img-top img-fluid" alt="Amaran">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Amaran</h5>
+            <a href="book-ticket.html?movieTitle=Amaran&movieImage=amaran.jpeg" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Movies -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="img-container">
+            <img src="/assets/images/av.jpeg" class="card-img-top img-fluid" alt="Avengers Endgame">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Avengers: Endgame</h5>
+            <a href="book-ticket.html?movieTitle=Avengers%20Endgame&movieImage=av.jpeg" class="btn btn-primary">Book
+              Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="img-container">
+            <img src="/assets/images/inception.jpeg" class="card-img-top img-fluid" alt="Inception">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Inception</h5>
+            <a href="book-ticket.html?movieTitle=Inception&movieImage=inception.jpeg" class="btn btn-primary">Book
+              Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="img-container">
+            <img src="/assets/images/smnwh.jpeg" class="card-img-top img-fluid" alt="Spider-Man">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Spider-Man: No Way Home</h5>
+            <a href="book-ticket.html?movieTitle=Spider-Man%20No%20Way%20Home&movieImage=smnwh.jpeg"
+              class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 MoviesWorld. All Rights Reserved.</p>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+
+</html>
